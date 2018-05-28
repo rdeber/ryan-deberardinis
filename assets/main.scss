@@ -1,0 +1,104 @@
+// File: assets/main.scss
+
+@import url("https://use.typekit.net/hlm3dxp.css");
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+
+// customize styles
+
+@import '~bulma';
+
+$header-color:   #212A44;
+$text-color:     #7F7B91;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "effra", "Helvetica Neue", Arial, sans-serif;
+    color: $header-color;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: "effra",sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.09rem;
+
+}
+
+// Logo.
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #212A44
+}
+
+// Page.
+.app-wrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    section {
+        flex: 1 1 0;
+    }
+}
+
+// Navbar.
+.navbar-menu {
+    display: inline-block;
+}
+
+
+
+.page-enter-active,
+.page-leave-active {
+  opacity: 1;
+  transition: opacity .25s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.page-enter-active {
+  animation-name: pageFadeInUp;
+}
+
+.page-leave-active {
+  animation-name: pageFadeOutDown;
+}
+
+.page-leave-active h1 {
+    transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transform: scale(2);
+}
+
+.page-leave-active .angles {
+    transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transform: translateY(500px);
+}
+
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+
+@-webkit-keyframes pageFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 1.25%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes pageFadeOutDown {
+  0% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 1.25%, 0);
+  }
+}

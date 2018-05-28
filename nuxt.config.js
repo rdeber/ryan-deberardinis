@@ -1,4 +1,26 @@
 module.exports = {
+
+  /*
+  ** Include css not in components
+  */
+  css: [
+    // { src: 'bulma/bulma.scss', lang: 'scss' },
+    // { src: 'normalize.css', lang: 'css' },
+    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' },
+    { src: '~assets/main.scss', lang: 'scss' },
+  ],
+
+  //plugins: [
+  //  { src: '~/plugins/custom', ssr: false }
+  //],
+
+  /*
+  ** Change location of dist folder
+  */
+  generate: {
+    dir: './deploy/'
+  },
+
   /*
   ** Headers of the page
   */
@@ -11,16 +33,31 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    //bodyAttrs: {
+    //  class: 'has-navbar-fixed-bottom'
+    //}
   },
+
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
   /*
   ** Build configuration
   */
   build: {
+    /*
+    ** Diable Postcss custom properties warnings
+    */
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': {
+          warnings: false
+        }
+      }
+    },
     /*
     ** Run ESLint on save
     */

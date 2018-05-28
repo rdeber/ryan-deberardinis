@@ -3,13 +3,16 @@
 <template>
   <section class="section is-large">
     <div class="container has-text-centered">
-      <h1>Ryan DeBerardinis</h1>
-      <h2>Design & Developer & Photographer</h2>
+      <transition-group appear enter-active-class="animated fadeInUp">
+        <h1 key="myName">Ryan DeBerardinis</h1>
+        <h2 key="myJobs">Designer + Developer + Photographer</h2>
+      </transition-group>
     </div>
   </section>
 </template>
 
 <script>
+
 </script>
 
 <style scoped>

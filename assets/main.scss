@@ -1,6 +1,7 @@
 // File: assets/main.scss
 
 @import url("https://use.typekit.net/hlm3dxp.css");
+@import "_mixins";
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/functions';
 
@@ -38,13 +39,45 @@ h1 {
     flex-direction: column;
 
     section {
-        flex: 1 1 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include tablet {
+        section {
+            order: 2;
+        }
     }
 }
 
+
 // Navbar.
+.navbar {
+    display: flex;
+}
 .navbar-menu {
-    display: inline-block;
+    box-shadow: none;
+    display: flex;
+    flex: 1;
+}
+.navbar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+@include tablet {
+    .navbar {
+        order: 1;
+    }
+    .navbar-menu {
+        justify-content: flex-end;
+    }
+    .navbar-item {
+        flex: 0;
+    }
 }
 
 
@@ -57,11 +90,13 @@ h1 {
   animation-fill-mode: both;
 }
 
-.page-enter-active {
+.page-enter-active,
+.page-enter-active .navbar {
   animation-name: pageFadeInUp;
 }
 
-.page-leave-active {
+.page-leave-active,
+.page-leave-active .navbar {
   animation-name: pageFadeOutDown;
 }
 

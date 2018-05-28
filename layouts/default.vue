@@ -3,7 +3,9 @@
 <template>
   <div class="app-wrap">
     <nuxt/>
-    <Navbar/>
+    <transition appear enter-active-class="animated fadeInUp">
+      <Navbar/>
+    </transition>
   </div>
 </template>
 

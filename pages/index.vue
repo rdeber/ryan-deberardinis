@@ -8,6 +8,14 @@
         <h2 key="myJobs">Designer + Developer + Photographer</h2>
       </transition-group>
     </div>
+    <div class="background-effect">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </section>
 </template>
 
@@ -17,8 +25,8 @@
 
 <style scoped>
 h2 {
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .angles {

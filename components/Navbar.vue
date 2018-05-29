@@ -2,14 +2,10 @@
 
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <nuxt-link class="navbar-item logo" to="/"><span>R</span>D.</nuxt-link>
-    </div>
-    <div class="navbar-menu">
-      <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
-      <nuxt-link class="navbar-item" to="/about">About</nuxt-link>
-      <nuxt-link class="navbar-item" to="/projects">Projects</nuxt-link>
-      <nuxt-link class="navbar-item" to="/contact">Contact</nuxt-link>
-    </div>
+    <nuxt-link class="navbar-item logo" to="/">RD<span>/</span></nuxt-link>
+    <nuxt-link class="navbar-item" to="/about"><i class="fas fa-user"></i><span>About</span></nuxt-link>
+    <nuxt-link class="navbar-item" to="/projects"><i class="fas fa-code"></i><span>Projects</span></nuxt-link>
+    <nuxt-link class="navbar-item" to="/photos"><i class="fas fa-camera"></i><span>Photos</span></nuxt-link>
+    <nuxt-link class="navbar-item" to="/contact"><i class="fas fa-envelope"></i><span>Contact</span></nuxt-link>
   </nav>
 </template>

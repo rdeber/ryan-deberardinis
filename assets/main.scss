@@ -4,136 +4,127 @@
 @import "_mixins";
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/functions';
-
-// customize styles
-
 @import '~bulma';
 
-$header-color:   #212A44;
-$text-color:     #7F7B91;
+// Colors.
+$primary-color:   #3d4676;
+$seconday-color:  #e85b6f;
+$header-color:    #212A44;
+$text-color:      #7F7B91;
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "effra", "Helvetica Neue", Arial, sans-serif;
-    color: $header-color;
+// Fonts.
+$font-family-1: "effra", "Helvetica Neue", Arial, sans-serif;
+$font-family-2: "quasimoda", "Helvetica Neue", Arial, sans-serif;
+
+
+// Typography.
+html, body {
+    font-family: $font-family-2;
+    color: $text-color;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-1;
+    color: $header-color;
+    font-weight: 800;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
 h1 {
-    font-size: 2rem;
-    font-family: "effra",sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.09rem;
-
+    font-size: 2.5rem;
+    letter-spacing: -0.05rem;
 }
 
 // Logo.
 .logo {
+    font-family: $font-family-1;
     font-size: 2rem;
     font-weight: 900;
-    color: #212A44
+    color: $primary-color;
+
+    span {
+        font-weight: 700;
+    }
 }
 
 // Page.
 .app-wrap {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 
     section {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        min-height: 100vh;
     }
+}
 
-    @include tablet {
-        section {
-            order: 2;
+// Navbar.
+.navbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.navbar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    &:first-of-type {
+        display: block;
+    }
+}
+@include tablet {
+    .navbar {
+        top: 0;
+        bottom: auto;
+    }
+    .navbar-item {
+        flex: 0;
+
+        &:first-of-type {
+            margin-right: auto;
         }
     }
 }
 
 
-// Navbar.
-.navbar {
-    display: flex;
-}
-.navbar-menu {
-    box-shadow: none;
-    display: flex;
-    flex: 1;
-}
-.navbar-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-@include tablet {
-    .navbar {
-        order: 1;
-    }
-    .navbar-menu {
-        justify-content: flex-end;
-    }
-    .navbar-item {
-        flex: 0;
+.background-effect {
+    position: relative;
+
+    span {
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        background: $primary-color;
+        box-shadow: inset 0 10px 13px rgba(0,0,0,.25);
+
+        &:nth-of-type(1) {
+            background: shade($primary-color, 15%);
+            transform: translate3d(0, 0, 10%);
+        }
     }
 }
 
 
-
-.page-enter-active,
+// Page transitions.
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.page-enter-active {
+transition: all .3s ease;
+}
 .page-leave-active {
-  opacity: 1;
-  transition: opacity .25s;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-
-.page-enter-active,
-.page-enter-active .navbar {
-  animation-name: pageFadeInUp;
-}
-
-.page-leave-active,
-.page-leave-active .navbar {
-  animation-name: pageFadeOutDown;
-}
-
-.page-leave-active h1 {
-    transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-    transform: scale(2);
-}
-
-.page-leave-active .angles {
-    transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-    transform: translateY(500px);
-}
-
-.page-enter, .page-leave-to {
-  opacity: 0;
-}
-
-
-@-webkit-keyframes pageFadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 1.25%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@-webkit-keyframes pageFadeOutDown {
-  0% {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    transform: translate3d(0, 1.25%, 0);
-  }
+.page-enter, .page-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+transform: translateY(10px);
+opacity: 0;
 }

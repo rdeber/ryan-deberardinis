@@ -118,13 +118,43 @@ h1 {
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
 .page-enter-active {
-transition: all .3s ease;
+    transition: all .3s ease;
 }
 .page-leave-active {
-transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.page-enter, .page-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-transform: translateY(10px);
-opacity: 0;
+.page-enter,
+.page-leave-to {
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
 }
+
+
+.portal-wrap {
+    position: relative;
+  }
+  .portal-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(25,25,25,.5);
+
+    &:nth-of-type(1) {
+        transform: scale(.9) translate3d(0, 0, 0);
+    }
+    &:nth-of-type(2) {
+        transform: scale(.8) translate3d(10px, 10px, 0);
+    }
+    &:nth-of-type(3) {
+        transform: scale(.7) translate3d(20px, 20px, 0);
+    }
+    &:nth-of-type(4) {
+        transform: scale(.6) translate3d(30px, 30px, 0);
+    }
+    &:nth-of-type(5) {
+        transform: scale(.5) translate3d(40px, 40px, 0);
+    }
+    &:nth-of-type(6) {
+        transform: scale(.4) translate3d(50px, 50px, 0);
+    }
+  }

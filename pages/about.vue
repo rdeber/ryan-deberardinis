@@ -10,7 +10,7 @@
           <p>Over the years I’ve worked on a multitude of front-end projects for a wide variety of clients. I’m skilled at delivering streamlined websites and UI experiences using optimized and efficient code. In my work I utilize an assortment of the latest tools and languages, including HTML, CSS, JS, SCSS, git, bootstrap, wordpress, etc..</p>
         </div>
         <div class="column">
-          <i class="fas fa-paint-brush"></i>
+          <i class="fas fa-palette"></i>
           <h2>Designer</h2>
           <p>Inspired by a minimalist approach my design work focuses on creating beautiful and inspiring creations that maximize usability. I have over 15 years industry experience designing beautiful things that utilize the latest technologies for a wide variety of clients. </p>
         </div>
@@ -28,5 +28,4 @@
 .svg-inline--fa {
   font-size: 4rem;
 }
-
 </style>

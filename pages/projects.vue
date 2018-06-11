@@ -2,53 +2,146 @@
 
 <template>
   <section class="section is-medium">
-    <div class="container has-text-centered">
-      <h1 class="title">My Projects</h1>
-        <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-            <div class="tile">
-              <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification is-primary">
-                  <p class="title">Vertical...</p>
-                  <p class="subtitle">Top tile</p>
-                </article>
-                <article class="tile is-child notification is-warning">
-                  <p class="title">...tiles</p>
-                  <p class="subtitle">Bottom tile</p>
-                </article>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child notification is-info">
-                  <p class="title">Middle tile</p>
-                  <p class="subtitle">With an image</p>
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                  </figure>
-                </article>
-              </div>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification is-danger">
-                <p class="title">Wide tile</p>
-                <p class="subtitle">Aligned with the right tile</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-success">
-              <div class="content">
-                <p class="title">Tall tile</p>
-                <p class="subtitle">With even more content</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
+    <transition-group appear enter-active-class="animated fadeInUp">
+      <h1 key="myName">Ryan DeBerardinis</h1>
+      <h2 key="myJobs">Designer + Developer + Photographer</h2>
+    </transition-group>
+    <div class="iso-grid">
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
+      <div class="iso-grid-item">
+        <img class="iso-grid-img" src="~/assets/projects/1.jpg" alt="01" />
+      </div>
     </div>
   </section>
 </template>
+
+<style lang="scss" scoped>
+@import "~/assets/_mixins.scss";
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+@import '~bulma';
+
+section {
+  background: linear-gradient(90deg, #58A8FB, #465683);
+  max-height: 100vh;
+  overflow: hidden;
+}
+.iso-grid {
+  transform-style: preserve-3d;
+  transform: translateY(10vh) rotateX(45deg) rotateZ(45deg);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: auto;
+
+  @include tablet {
+    max-width: 62%;
+  }
+}
+.iso-grid-item {
+  flex: 1 0 29%;
+  margin: 2%;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,0);
+  @include shadow(3);
+  transition: 250ms $ease;
+
+  &:hover,
+  &:focus {
+    transform: translate3d(0,0,20px);
+    @include shadow(8);
+  }
+
+  @include tablet {
+    flex: 1 0 30%;
+    margin: 1%;
+  }
+}
+</style>

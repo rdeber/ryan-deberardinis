@@ -52,16 +52,19 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** Diable Postcss custom properties warnings
-    */
     postcss: {
       plugins: {
+        // Diable Postcss custom properties warnings
         'postcss-custom-properties': {
           warnings: false
+        },
+        // Force scss preprocessor to run
+        'postcss-cssnext': {
+          browsers: ['last 3 versions', 'ie >= 10']
         }
       }
     },
+
     /*
     ** Run ESLint on save
     */

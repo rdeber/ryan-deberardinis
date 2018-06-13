@@ -24,7 +24,7 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .svg-inline--fa {
   font-size: 4rem;
 }

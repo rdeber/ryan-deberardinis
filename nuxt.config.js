@@ -6,6 +6,7 @@ module.exports = {
   css: [
     // { src: 'bulma/bulma.scss', lang: 'scss' },
     // { src: 'normalize.css', lang: 'css' },
+    { src: 'bulma/bulma.sass', lang: 'sass' },
     { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' },
     { src: '~assets/main.scss', lang: 'scss' },
   ],
@@ -19,6 +20,13 @@ module.exports = {
   */
   generate: {
     dir: './deploy/'
+  },
+
+  /*
+  ** Register middleware
+  */
+  router: {
+    middleware: 'pages'
   },
 
   /*

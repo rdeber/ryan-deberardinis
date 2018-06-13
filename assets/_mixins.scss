@@ -1,5 +1,15 @@
-/// Slightly lighten a color
-/// @access public
+// Colors.
+$primary-color:   #3d4676;
+$seconday-color:  #e85b6f;
+$header-color:    #212A44;
+$text-color:      #7F7B91;
+
+// Fonts.
+@import url("https://use.typekit.net/hlm3dxp.css");
+$font-family-1: "effra", "Helvetica Neue", Arial, sans-serif;
+$font-family-2: "quasimoda", "Helvetica Neue", Arial, sans-serif;
+
+/// Tint function.
 /// @param {Color} $color - color to tint
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
@@ -7,8 +17,7 @@
   @return mix(white, $color, $percentage);
 }
 
-/// Slightly darken a color
-/// @access public
+/// Shade function.
 /// @param {Color} $color - color to shade
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
@@ -31,8 +40,9 @@
 
 // Cubic-bezier easing variables.
 // Standard
-$ease:        cubic-bezier(0.4, 0.0, 0.2, 1);
+$ease:     cubic-bezier(0.4, 0.0, 0.2, 1);
 // Incoming
-$ease-in:     cubic-bezier(0.0, 0.0, 0.2, 1);
+$ease-in:  cubic-bezier(0.0, 0.0, 0.2, 1);
 // Exiting
-$ease-out:    cubic-bezier(0.4, 0.0, 1, 1);
+$ease-out: cubic-bezier(0.4, 0.0, 1, 1);
+

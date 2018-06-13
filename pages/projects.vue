@@ -103,9 +103,7 @@
 
 <style lang="scss" scoped>
 @import "~/assets/_mixins.scss";
-@import '~bulma/sass/utilities/initial-variables';
-@import '~bulma/sass/utilities/functions';
-@import '~bulma';
+
 
 section {
   background: linear-gradient(90deg, #58A8FB, #465683);
@@ -121,9 +119,6 @@ section {
   flex-wrap: wrap;
   margin-bottom: auto;
 
-  @include tablet {
-    max-width: 62%;
-  }
 }
 .iso-grid-item {
   flex: 1 0 29%;
@@ -139,9 +134,5 @@ section {
     @include shadow(8);
   }
 
-  @include tablet {
-    flex: 1 0 30%;
-    margin: 1%;
-  }
 }
 </style>

@@ -10,15 +10,30 @@
         'photos' : (page === 'photos'),
         'about' : (page === 'about')
       }">
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
-      <span><img v-if="(page === 'projects')" src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" /></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </transition>
 </template>
@@ -35,67 +50,82 @@ export default {
 @import "~/assets/_mixins.scss";
 
 .shapes {
+  transform: translateY(0);
   position: absolute;
   top: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  transition: 600ms $ease-in;
+  transition: 1s $ease-in;
+  backface-visibility: hidden;
 
   span {
+    display: inline-block;
     background-color: #999;
-    min-width: 30vw;
-    height: 33vh;
-    width: 33.333%;
-    transition: 600ms $ease-in;
+    height: 90vh;
+    width: 10%;
+    transition: 1s $ease-in;
     backface-visibility: hidden;
   }
-}
-
-// Shape styles for home page.
-.home {
-  transform: translateY(70vh);
-  span {
-    background-color: purple;
-    transform: rotateX(45deg) rotateZ(45deg);
-  }
-}
-
-// Shape styles for about page.
-.about {
-  span {
-    background-color: blue;
-  }
-}
-
-// Shape styles for projects page.
-.projects {
-  transform: translateY(0);
-  span {
-    margin: 0 1% 1%;
-    height: auto;
-    width: 125px;
-    background-color: green;
-    transform: rotateX(0) rotateZ(0);
-
-    img {
-      transition: 600ms $ease-in;
-    }
-  }
-}
-// Animation delay iteration for project images.
-@for $i from 1 to 10 {
-  .shapes span:nth-child(#{$i}) img { transition-delay: $i * 200ms; }
 }
 // Transition delay iteration.
 @for $i from 1 to 10 {
   .shapes span:nth-child(#{$i}) { transition-delay: $i * 100ms; }
 }
 
-.photos span {
-  background-color: orange;
+// Shape styles for home page.
+.home {
+  transform: translateY(25vh);
+  span {
+    background-image: linear-gradient(#E85B6F, #112B4D);
+    transform: rotateX(45deg) rotateZ(45deg);
+  }
+}
+
+// Shape styles for about page.
+.about {
+  transform: translateY(20vh);
+  span {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 1%;
+    background-color: blue;
+    visibility: hidden;
+    opacity: 0;
+    transform: rotateX(45deg) rotateZ(90deg);
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// Shape styles for projects page.
+.projects {
+  transform: translateY(60px);
+  span {
+    //animation: mymove 250ms;
+    animation-delay: 1000ms;
+    animation-fill-mode: both;
+  }
+}
+@keyframes mymove {
+    0%   {opacity: 1;}
+    100%  {opacity: 0;}
+}
+
+.photos {
+  justify-content: flex-start;
+
+  span {
+    background-color: orange;
+    flex: 1 0 100%;
+
+    &:nth-of-type(1) {
+      width: 100%;
+    }
+  }
 }
 .contact span {
   background-color: red;

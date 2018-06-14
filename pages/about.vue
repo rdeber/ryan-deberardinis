@@ -1,7 +1,6 @@
 <template>
   <section class="section is-medium">
     <div class="container has-text-centered">
-      <h1><i class="fas fa-user-ninja"></i>Who am I?</h1>
       <p>Hello, my name is Ryan DeBerardinis and I am a creative professional living and working in New York City. I specialize in front end development and UI design, with a passion for photography. Over the years I’ve worked as both a freelancer and as an integral part of dynamic teams. I’ve had the privilege to work with some amazing companies and collaborate on some truly inspiring projects. My photography has also been featured in many articles, publications and websites.</p>
       <div class="columns">
         <div class="column">

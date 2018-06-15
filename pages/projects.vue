@@ -2,17 +2,7 @@
 
 <template>
   <section class="section is-medium">
-    <div class="projects-wrap">
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-        <img src="~/assets/projects/1.jpg" class="animated fadeIn" alt="01" />
-    </div>
+
   </section>
 </template>
 

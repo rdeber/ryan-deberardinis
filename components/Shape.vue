@@ -19,21 +19,6 @@
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
     </div>
   </transition>
 </template>
@@ -54,15 +39,17 @@ export default {
   position: absolute;
   top: 0;
   width: 100%;
-  transition: 1s $ease-in;
+  transition: 1800ms $ease-in;
   backface-visibility: hidden;
 
   span {
     display: inline-block;
     background-color: #999;
+    background-image: linear-gradient(#E85B6F, #112B4D);
     height: 90vh;
     width: 10%;
-    transition: 1s $ease-in;
+    opacity: 1;
+    transition: 800ms $ease-in;
     backface-visibility: hidden;
   }
 }
@@ -75,7 +62,6 @@ export default {
 .home {
   transform: translateY(25vh);
   span {
-    background-image: linear-gradient(#E85B6F, #112B4D);
     transform: rotateX(45deg) rotateZ(45deg);
   }
 }
@@ -105,14 +91,20 @@ export default {
 .projects {
   transform: translateY(60px);
   span {
-    //animation: mymove 250ms;
+    animation: projects 800ms;
     animation-delay: 1000ms;
     animation-fill-mode: both;
+    margin-right: -1px;
+
+    &:nth-of-type(3),
+    &:nth-of-type(6) {
+      margin-right: 1%;
+    }
   }
 }
-@keyframes mymove {
-    0%   {opacity: 1;}
-    100%  {opacity: 0;}
+@keyframes projects {
+    0%    {height: 90vh;}
+    100%  {height: 125px;}
 }
 
 .photos {

@@ -19,6 +19,21 @@
       <span></span>
       <span></span>
       <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </transition>
 </template>
@@ -35,71 +50,70 @@ export default {
 @import "~/assets/_mixins.scss";
 
 .shapes {
-  transform: translateY(0);
-  position: absolute;
-  top: 0;
+  // The content width you use on your website
+  --content-width: 100vw;
+
+  // The size of the gutter
+  --gutter: 5px;
+
+  // The amount of columns
+  --columns: 6;
+
+  // This is the calculation for the row height.
+  --row-size: calc(
+    ( var(--content-width) - (var(--gutter) * (var(--columns) - 1))
+    ) / var(--columns)
+  );
+
+  display: grid;
+
   width: 100%;
-  transition: 1800ms $ease-in;
+  max-width: var(--content-width);
+
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-auto-rows: var(--row-size);
+
+  grid-column-gap: var(--gutter);
+  grid-row-gap: var(--gutter);
+
+  position: absolute;
+  transition: 700ms $ease-in;
   backface-visibility: hidden;
 
   span {
-    display: inline-block;
+    display: block;
     background-color: #999;
-    background-image: linear-gradient(#E85B6F, #112B4D);
-    height: 90vh;
-    width: 10%;
+    height: 100%;
+    width: 100%;
     opacity: 1;
-    transition: 800ms $ease-in;
+    transition: 700ms $ease-in;
     backface-visibility: hidden;
   }
 }
 // Transition delay iteration.
-@for $i from 1 to 10 {
-  .shapes span:nth-child(#{$i}) { transition-delay: $i * 100ms; }
+@for $i from 1 to 25 {
+  .shapes span:nth-child(#{$i}) { transition-delay: $i * 10ms; }
 }
 
 // Shape styles for home page.
 .home {
-  transform: translateY(25vh);
+  transform: rotateX(45deg) rotateZ(45deg);
   span {
-    transform: rotateX(45deg) rotateZ(45deg);
+
   }
 }
 
 // Shape styles for about page.
 .about {
-  transform: translateY(20vh);
   span {
-    width: 100%;
-    height: 20vh;
-    margin-bottom: 1%;
-    background-color: blue;
-    visibility: hidden;
-    opacity: 0;
-    transform: rotateX(45deg) rotateZ(90deg);
-
-    &:nth-of-type(1),
-    &:nth-of-type(2),
-    &:nth-of-type(3) {
-      visibility: visible;
-      opacity: 1;
-    }
   }
 }
 
 // Shape styles for projects page.
 .projects {
-  transform: translateY(60px);
+  transform: rotateX(0) rotateZ(0);
   span {
-    animation: projects 800ms;
-    animation-delay: 1000ms;
-    animation-fill-mode: both;
-    margin-right: -1px;
 
-    &:nth-of-type(3),
-    &:nth-of-type(6) {
-      margin-right: 1%;
-    }
   }
 }
 @keyframes projects {

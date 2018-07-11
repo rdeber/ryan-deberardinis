@@ -37,7 +37,7 @@ export default {
 .shapes {
   transform: translateY(0);
   position: absolute;
-  top: 0;
+  bottom: 0;
   width: 100%;
   transition: 1800ms $ease-in;
   backface-visibility: hidden;
@@ -46,7 +46,7 @@ export default {
     display: inline-block;
     background-color: #999;
     background-image: linear-gradient(#E85B6F, #112B4D);
-    height: 90vh;
+    height: 55vh;
     width: 10%;
     opacity: 1;
     transition: 800ms $ease-in;

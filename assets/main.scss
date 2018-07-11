@@ -9,6 +9,7 @@
 html, body {
     font-family: $font-family-2;
     color: $text-color;
+    height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-1;
@@ -78,17 +79,6 @@ h1 {
 // Page transitions.
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
-.page-enter-active {
-    transition: all .3s ease;
-}
-.page-leave-active {
-    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.page-enter,
-.page-leave-to {
-    transform: translate3d(0, 10px, 0);
-    opacity: 0;
-}
 
 
 

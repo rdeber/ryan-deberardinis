@@ -68,7 +68,7 @@ module.exports = {
         },
         // Force scss preprocessor to run
         'postcss-cssnext': {
-          browsers: ['last 3 versions', 'ie >= 10']
+          browsers: ['last 1 versions', 'ie >= 10']
         }
       }
     },

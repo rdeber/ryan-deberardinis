@@ -1,8 +1,9 @@
 // Colors.
-$primary-color:   #3d4676;
-$seconday-color:  #e85b6f;
-$header-color:    #212A44;
-$text-color:      #7F7B91;
+$primary-color:    #3d4676;
+$secondary-color:  #e85b6f;
+$tertiary-color:   #212A44;
+$header-color:      $tertiary-color;
+$text-color:       #7F7B91;
 
 // Fonts.
 @import url("https://use.typekit.net/hlm3dxp.css");

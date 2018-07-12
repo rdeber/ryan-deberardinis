@@ -1,7 +1,7 @@
 <!-- components/Shape.vue -->
 
 <template>
-  <transition name="list">
+  <transition name="list" appear enter-active-class="animated fadeIn">
     <div class="shapes"
       :class="{
         'home' :(page === 'index'),
@@ -57,12 +57,22 @@ export default {
 @for $i from 1 to 10 {
   .shapes span:nth-child(#{$i}) { transition-delay: $i * 100ms; }
 }
-
+// Animation delay iteration.
+@for $i from 1 to 10 {
+  .shapes span:nth-child(#{$i}) { animation-delay: $i * 100ms; }
+}
 // Shape styles for home page.
 .home {
   transform: translateY(25vh);
   span {
-    transform: rotateX(45deg) rotateZ(45deg);
+    transform: translateX(25vh) translateY(25vh) rotateX(45deg) rotateZ(45deg);
+    animation: shape-home-in 1s linear forwards;
+  }
+}
+
+@keyframes shape-home-in {
+  100% {
+    transform: translate3d(0,0,0) rotateX(45deg) rotateZ(45deg);
   }
 }
 

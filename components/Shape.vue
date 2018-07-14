@@ -1,15 +1,16 @@
 <!-- components/Shape.vue -->
 
 <template>
-  <transition name="list" appear enter-active-class="animated fadeIn">
+  <transition name="list" appear enter-active-class="initial-load">
     <div class="shapes"
       :class="{
         'home' :(page === 'index'),
         'about' : (page === 'about'),
         'projects' : (page === 'projects'),
         'photos' : (page === 'photos'),
-        'about' : (page === 'about')
+        'contact' : (page === 'contact')
       }">
+      <span></span>
       <span></span>
       <span></span>
       <span></span>
@@ -37,7 +38,7 @@ export default {
 .shapes {
   transform: translateY(0);
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
   transition: 1800ms $ease-in;
   backface-visibility: hidden;
@@ -54,27 +55,36 @@ export default {
   }
 }
 // Transition delay iteration.
-@for $i from 1 to 10 {
+@for $i from 1 through 10 {
   .shapes span:nth-child(#{$i}) { transition-delay: $i * 100ms; }
 }
 // Animation delay iteration.
-@for $i from 1 to 10 {
+@for $i from 1 through 10 {
   .shapes span:nth-child(#{$i}) { animation-delay: $i * 100ms; }
 }
+
 // Shape styles for home page.
 .home {
-  transform: translateY(25vh);
+  transform: translateY(51vh);
   span {
-    transform: translateX(25vh) translateY(25vh) rotateX(45deg) rotateZ(45deg);
-    animation: shape-home-in 1s linear forwards;
+    //transform: translateX(25vh) translateY(25vh) rotateX(45deg) rotateZ(45deg);
+    //animation: shape-home-in 1s linear forwards;
+    height: 55vh;
+    transform: translate3d(0,0,0) rotateX(45deg) rotateZ(45deg);
+  }
+
+  &.initial-load {
+
   }
 }
 
+/*
 @keyframes shape-home-in {
   100% {
     transform: translate3d(0,0,0) rotateX(45deg) rotateZ(45deg);
   }
 }
+*/
 
 // Shape styles for about page.
 .about {
@@ -101,20 +111,8 @@ export default {
 .projects {
   transform: translateY(60px);
   span {
-    animation: projects 800ms;
-    animation-delay: 1000ms;
-    animation-fill-mode: both;
-    margin-right: -1px;
-
-    &:nth-of-type(3),
-    &:nth-of-type(6) {
-      margin-right: 1%;
-    }
+    height: 125px;
   }
-}
-@keyframes projects {
-    0%    {height: 90vh;}
-    100%  {height: 125px;}
 }
 
 .photos {
@@ -129,7 +127,12 @@ export default {
     }
   }
 }
-.contact span {
-  background-color: red;
+
+// Shape styles for projects page.
+.contact {
+  transform: translateY(0);
+  span {
+    height: 100vh;
+  }
 }
 </style>

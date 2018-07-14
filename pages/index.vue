@@ -104,10 +104,14 @@ $stroke-duration: 4s;
 .text-copy {
   fill: none;
   stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
-  stroke-width: 3px;
+  stroke-width: 2px;
+  stroke: rgba(0,0,0,0);
   stroke-linecap: round;
   animation: stroke-offset $stroke-duration linear forwards;
   animation-direction: reverse;
+  @include breakpoint(tablet) {
+    stroke-width: 3px;
+  }
 
   @for $item from 1 through $max {
     $stroke-color: nth($colors, $item);
@@ -125,7 +129,6 @@ $stroke-duration: 4s;
     stroke-dasharray: 0% $stroke-step * $max*2.5;
   }
 }
-
 
 .text-copy-solid {
   //$fill-duration: $stroke-duration - 2;

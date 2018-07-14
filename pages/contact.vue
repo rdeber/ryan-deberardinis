@@ -33,9 +33,12 @@
 </template>
 
 
-<style scoped>
-.section {
-  background: linear-gradient(75deg, #786BAF, #E85B6F, #F58669);
+<style lang="scss" scoped>
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 </style>
 

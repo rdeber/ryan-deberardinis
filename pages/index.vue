@@ -3,9 +3,112 @@
 <template>
   <section class="section">
     <transition name="fade">
-      <svg version="1.1" id="my-name" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 62">
-        <symbol id="s-text">
-          <text text-anchor="middle" dominant-baseline="central" x="50%" y="50%">
+      <h1>
+        <svg class="stacked" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+          <symbol id="my-name-stacked">
+            <text dominant-baseline="central" x="50%" y="50%">
+              <tspan x="0%" dy="0">
+              <tspan alignment-baseline="middle">R</tspan>
+              <tspan alignment-baseline="middle">Y</tspan>
+              <tspan alignment-baseline="middle">A</tspan>
+              <tspan alignment-baseline="middle">N</tspan>
+              </tspan>
+              <tspan x="0%" dy="55">
+              <tspan alignment-baseline="middle">D</tspan>
+              <tspan alignment-baseline="middle">E</tspan>
+              <tspan alignment-baseline="middle">B</tspan>
+              <tspan alignment-baseline="middle">E</tspan>
+              <tspan alignment-baseline="middle">R</tspan>
+              <tspan alignment-baseline="middle">A</tspan>
+              <tspan alignment-baseline="middle">R</tspan>
+              <tspan alignment-baseline="middle">D</tspan>
+              <tspan alignment-baseline="middle">I</tspan>
+              <tspan alignment-baseline="middle">N</tspan>
+              <tspan alignment-baseline="middle">I</tspan>
+              <tspan alignment-baseline="middle">S</tspan>
+              </tspan>
+            </text>
+          </symbol>
+          <g>
+            <use xlink:href="#my-name-stacked"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-stacked"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-stacked"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-stacked"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-stacked"
+              class="text-copy">
+            </use>
+          </g>
+          <text  class="text-copy-solid" dominant-baseline="central" x="50%" y="50%">
+            <tspan x="0%" dy="0">
+            <tspan alignment-baseline="middle">R</tspan>
+            <tspan alignment-baseline="middle">Y</tspan>
+            <tspan alignment-baseline="middle">A</tspan>
+            <tspan alignment-baseline="middle">N</tspan>
+            </tspan>
+            <tspan x="0%" dy="55">
+            <tspan alignment-baseline="middle">D</tspan>
+            <tspan alignment-baseline="middle">E</tspan>
+            <tspan alignment-baseline="middle">B</tspan>
+            <tspan alignment-baseline="middle">E</tspan>
+            <tspan alignment-baseline="middle">R</tspan>
+            <tspan alignment-baseline="middle">A</tspan>
+            <tspan alignment-baseline="middle">R</tspan>
+            <tspan alignment-baseline="middle">D</tspan>
+            <tspan alignment-baseline="middle">I</tspan>
+            <tspan alignment-baseline="middle">N</tspan>
+            <tspan alignment-baseline="middle">I</tspan>
+            <tspan alignment-baseline="middle">S</tspan>
+            </tspan>
+          </text>
+        </svg>
+
+        <svg class="inline" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+          <symbol id="my-name-inline">
+            <text text-anchor="middle" dominant-baseline="central" x="50%" y="50%">
+              <tspan alignment-baseline="middle">R</tspan>
+              <tspan alignment-baseline="middle">Y</tspan>
+              <tspan alignment-baseline="middle">A</tspan>
+              <tspan alignment-baseline="middle">N</tspan>
+              <tspan alignment-baseline="middle">D</tspan>
+              <tspan alignment-baseline="middle">e</tspan>
+              <tspan alignment-baseline="middle">B</tspan>
+              <tspan alignment-baseline="middle">E</tspan>
+              <tspan alignment-baseline="middle">R</tspan>
+              <tspan alignment-baseline="middle">A</tspan>
+              <tspan alignment-baseline="middle">R</tspan>
+              <tspan alignment-baseline="middle">D</tspan>
+              <tspan alignment-baseline="middle">I</tspan>
+              <tspan alignment-baseline="middle">N</tspan>
+              <tspan alignment-baseline="middle">I</tspan>
+              <tspan alignment-baseline="middle">S</tspan>
+            </text>
+          </symbol>
+          <g class="inline">
+            <use xlink:href="#my-name-inline"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-inline"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-inline"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-inline"
+              class="text-copy">
+            </use>
+            <use xlink:href="#my-name-inline"
+              class="text-copy">
+            </use>
+          </g>
+          <text class="text-copy-solid inline" dominant-baseline="central" text-anchor="middle" x="50%" y="50%">
             <tspan alignment-baseline="middle">R</tspan>
             <tspan alignment-baseline="middle">Y</tspan>
             <tspan alignment-baseline="middle">A</tspan>
@@ -23,43 +126,8 @@
             <tspan alignment-baseline="middle">I</tspan>
             <tspan alignment-baseline="middle">S</tspan>
           </text>
-        </symbol>
-        <g class="g-ants">
-          <use xlink:href="#s-text"
-            class="text-copy">
-          </use>
-          <use xlink:href="#s-text"
-            class="text-copy">
-          </use>
-          <use xlink:href="#s-text"
-            class="text-copy">
-          </use>
-          <use xlink:href="#s-text"
-            class="text-copy">
-          </use>
-          <use xlink:href="#s-text"
-            class="text-copy">
-          </use>
-        </g>
-        <text class="text-copy-solid" dominant-baseline="central" text-anchor="middle" x="50%" y="50%">
-          <tspan alignment-baseline="middle">R</tspan>
-          <tspan alignment-baseline="middle">Y</tspan>
-          <tspan alignment-baseline="middle">A</tspan>
-          <tspan alignment-baseline="middle">N</tspan>
-          <tspan alignment-baseline="middle">D</tspan>
-          <tspan alignment-baseline="middle">e</tspan>
-          <tspan alignment-baseline="middle">B</tspan>
-          <tspan alignment-baseline="middle">E</tspan>
-          <tspan alignment-baseline="middle">R</tspan>
-          <tspan alignment-baseline="middle">A</tspan>
-          <tspan alignment-baseline="middle">R</tspan>
-          <tspan alignment-baseline="middle">D</tspan>
-          <tspan alignment-baseline="middle">I</tspan>
-          <tspan alignment-baseline="middle">N</tspan>
-          <tspan alignment-baseline="middle">I</tspan>
-          <tspan alignment-baseline="middle">S</tspan>
-        </text>
-      </svg>
+        </svg>
+      </h1>
     </transition>
     <h2>
       <span class="designer animated fadeIn">Designer </span>
@@ -82,13 +150,31 @@ section {
   justify-content: center;
 }
 
+h1 {
+  width: 100%;
+
+  @include breakpoint(tablet) {
+    text-align: center;
+  }
+}
+
 svg {
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 4.5rem;
   letter-spacing: -.075rem;
+
+  &.inline {
+    display: none;
+  }
 
   @include breakpoint(tablet) {
     max-width: 61vw;
+    &.inline {
+      display: block;
+    }
+    &.stacked {
+      display: none;
+    }
   }
 }
 
@@ -104,13 +190,12 @@ $stroke-duration: 4s;
 .text-copy {
   fill: none;
   stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
-  stroke-width: 2px;
+  stroke-width: 3px;
   stroke: rgba(0,0,0,0);
   stroke-linecap: round;
   animation: stroke-offset $stroke-duration linear forwards;
   animation-direction: reverse;
   @include breakpoint(tablet) {
-    stroke-width: 3px;
   }
 
   @for $item from 1 through $max {
@@ -201,9 +286,12 @@ h2 {
   line-height: 1;
   font-weight: 300;
   margin-bottom: 21vh;
+  text-align: left;
+  width: 100%;
 
   @include breakpoint(tablet) {
     font-size: 3vw;
+    text-align: center;
   }
 
   span {

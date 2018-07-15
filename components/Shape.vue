@@ -40,8 +40,11 @@ export default {
   position: absolute;
   top: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
   transition: 1800ms $ease-in;
   backface-visibility: hidden;
+  overflow: hidden;
 
   span {
     display: inline-block;
@@ -50,31 +53,23 @@ export default {
     height: 55vh;
     width: 10%;
     opacity: 1;
-    transition: 800ms $ease-in;
+    transition: all 800ms $ease-in;
     backface-visibility: hidden;
   }
-}
-// Transition delay iteration.
-@for $i from 1 through 10 {
-  .shapes span:nth-child(#{$i}) { transition-delay: $i * 100ms; }
-}
-// Animation delay iteration.
-@for $i from 1 through 10 {
-  .shapes span:nth-child(#{$i}) { animation-delay: $i * 100ms; }
 }
 
 // Shape styles for home page.
 .home {
-  transform: translateY(51vh);
   span {
     //transform: translateX(25vh) translateY(25vh) rotateX(45deg) rotateZ(45deg);
     //animation: shape-home-in 1s linear forwards;
     height: 55vh;
-    transform: translate3d(0,0,0) rotateX(45deg) rotateZ(45deg);
+    transform: translate3d(0,75%,0) rotateX(45deg) rotateZ(45deg);
   }
 
-  &.initial-load {
-
+  // Transition delay iteration.
+  @for $i from 1 through 10 {
+    span:nth-child(#{$i}) { transition-delay: $i * 50ms; }
   }
 }
 
@@ -88,51 +83,42 @@ export default {
 
 // Shape styles for about page.
 .about {
-  transform: translateY(20vh);
   span {
-    width: 100%;
     height: 20vh;
-    margin-bottom: 1%;
-    background-color: blue;
-    visibility: hidden;
-    opacity: 0;
-    transform: rotateX(45deg) rotateZ(90deg);
+    transform: translate3d(0, 0, 0) rotate(90deg)
+  }
 
-    &:nth-of-type(1),
-    &:nth-of-type(2),
-    &:nth-of-type(3) {
-      visibility: visible;
-      opacity: 1;
-    }
+  // Transition delay iteration.
+  @for $i from 1 through 10 {
+    span:nth-child(#{$i}) { transition-delay: $i * 250ms; }
   }
 }
 
 // Shape styles for projects page.
 .projects {
-  transform: translateY(60px);
   span {
-    height: 125px;
+    height: 150px;
+    transform: translate3d(0,0,0);
   }
 }
 
+// Shape styles for photos page.
 .photos {
-  justify-content: flex-start;
-
   span {
-    background-color: orange;
-    flex: 1 0 100%;
-
-    &:nth-of-type(1) {
-      width: 100%;
-    }
+    height: 400px;
+    transform: translate3d(0,0,0);
   }
 }
 
 // Shape styles for projects page.
 .contact {
-  transform: translateY(0);
   span {
-    height: 100vh;
+    height: 100%;
+    transform: translate3d(0,0,0);
+  }
+  // Transition delay iteration.
+  @for $i from 1 through 10 {
+    span:nth-child(#{$i}) { transition-delay: $i * 100ms; }
   }
 }
 </style>

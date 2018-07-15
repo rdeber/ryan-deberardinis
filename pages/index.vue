@@ -70,7 +70,7 @@
           </text>
         </svg>
 
-        <svg class="inline" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+        <svg class="inline" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 62">
           <symbol id="my-name-inline">
             <text text-anchor="middle" dominant-baseline="central" x="50%" y="50%">
               <tspan alignment-baseline="middle">R</tspan>
@@ -168,13 +168,17 @@ svg {
   }
 
   @include breakpoint(tablet) {
-    max-width: 61vw;
+    font-size: 3.25rem;
+    max-width: 75vw;
     &.inline {
-      display: block;
+      display: inline-block;
     }
     &.stacked {
       display: none;
     }
+  }
+  @include breakpoint(desktop) {
+    max-width: 66vw;
   }
 }
 

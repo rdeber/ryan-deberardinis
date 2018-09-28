@@ -4,28 +4,28 @@
   <section class="section">
     <transition name="fade">
       <h1>
-        <svg class="stacked" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+        <svg class="stacked" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 125">
           <symbol id="my-name-stacked">
-            <text dominant-baseline="central" x="50%" y="50%">
-              <tspan x="0%" dy="0">
-              <tspan alignment-baseline="middle">R</tspan>
-              <tspan alignment-baseline="middle">Y</tspan>
-              <tspan alignment-baseline="middle">A</tspan>
-              <tspan alignment-baseline="middle">N</tspan>
+            <text dominant-baseline="auto" y="50%">
+              <tspan x="0" dy="0">
+              <tspan>R</tspan>
+              <tspan>Y</tspan>
+              <tspan>A</tspan>
+              <tspan>N</tspan>
               </tspan>
-              <tspan x="0%" dy="55">
-              <tspan alignment-baseline="middle">D</tspan>
-              <tspan alignment-baseline="middle">E</tspan>
-              <tspan alignment-baseline="middle">B</tspan>
-              <tspan alignment-baseline="middle">E</tspan>
-              <tspan alignment-baseline="middle">R</tspan>
-              <tspan alignment-baseline="middle">A</tspan>
-              <tspan alignment-baseline="middle">R</tspan>
-              <tspan alignment-baseline="middle">D</tspan>
-              <tspan alignment-baseline="middle">I</tspan>
-              <tspan alignment-baseline="middle">N</tspan>
-              <tspan alignment-baseline="middle">I</tspan>
-              <tspan alignment-baseline="middle">S</tspan>
+              <tspan x="0" dy="55">
+              <tspan>D</tspan>
+              <tspan>E</tspan>
+              <tspan>B</tspan>
+              <tspan>E</tspan>
+              <tspan>R</tspan>
+              <tspan>A</tspan>
+              <tspan>R</tspan>
+              <tspan>D</tspan>
+              <tspan>I</tspan>
+              <tspan>N</tspan>
+              <tspan>I</tspan>
+              <tspan>S</tspan>
               </tspan>
             </text>
           </symbol>
@@ -46,26 +46,26 @@
               class="text-copy">
             </use>
           </g>
-          <text  class="text-copy-solid" dominant-baseline="central" x="50%" y="50%">
+          <text class="text-copy-solid" dominant-baseline="auto" y="50%">
             <tspan x="0%" dy="0">
-            <tspan alignment-baseline="middle">R</tspan>
-            <tspan alignment-baseline="middle">Y</tspan>
-            <tspan alignment-baseline="middle">A</tspan>
-            <tspan alignment-baseline="middle">N</tspan>
+            <tspan>R</tspan>
+            <tspan>Y</tspan>
+            <tspan>A</tspan>
+            <tspan>N</tspan>
             </tspan>
             <tspan x="0%" dy="55">
-            <tspan alignment-baseline="middle">D</tspan>
-            <tspan alignment-baseline="middle">E</tspan>
-            <tspan alignment-baseline="middle">B</tspan>
-            <tspan alignment-baseline="middle">E</tspan>
-            <tspan alignment-baseline="middle">R</tspan>
-            <tspan alignment-baseline="middle">A</tspan>
-            <tspan alignment-baseline="middle">R</tspan>
-            <tspan alignment-baseline="middle">D</tspan>
-            <tspan alignment-baseline="middle">I</tspan>
-            <tspan alignment-baseline="middle">N</tspan>
-            <tspan alignment-baseline="middle">I</tspan>
-            <tspan alignment-baseline="middle">S</tspan>
+            <tspan>D</tspan>
+            <tspan>E</tspan>
+            <tspan>B</tspan>
+            <tspan>E</tspan>
+            <tspan>R</tspan>
+            <tspan>A</tspan>
+            <tspan>R</tspan>
+            <tspan>D</tspan>
+            <tspan>I</tspan>
+            <tspan>N</tspan>
+            <tspan>I</tspan>
+            <tspan>S</tspan>
             </tspan>
           </text>
         </svg>
@@ -147,11 +147,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 h1 {
   width: 100%;
+  margin-top: 5rem;
 
   @include breakpoint(tablet) {
     text-align: center;
@@ -289,7 +289,6 @@ h2 {
   font-size: 1.25rem;
   line-height: 1;
   font-weight: 300;
-  margin-bottom: 21vh;
   text-align: left;
   width: 100%;
 

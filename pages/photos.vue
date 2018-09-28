@@ -3,7 +3,9 @@
 <template>
   <section>
     <transition>
-    <div class="banner animated fadeIn"></div>
+    <div class="banner animated fadeIn">
+      <p>Our job is to record, each in his own way, this world of light and shadow and time that will never come again exactly as it is today.<span> -Edward Abbey</span></p>
+    </div>
     </transition>
     <div class="container">
       <div class="photos">
@@ -31,7 +33,23 @@
   background-size: cover;
   animation-delay: 400ms;
   position: relative;
-  height: 400px;
+  height: 555px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255,255,255,.8);
+    max-width: 37rem;
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+      font-style: italic;
+    }
+  }
 }
 .photos img {
   animation-delay: 700ms;

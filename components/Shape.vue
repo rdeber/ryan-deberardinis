@@ -46,6 +46,10 @@ export default {
   backface-visibility: hidden;
   overflow: hidden;
 
+  @include breakpoint(tablet) {
+    overflow: visible;
+  }
+
   span {
     display: inline-block;
     background-color: #999;
@@ -63,13 +67,19 @@ export default {
   span {
     //transform: translateX(25vh) translateY(25vh) rotateX(45deg) rotateZ(45deg);
     //animation: shape-home-in 1s linear forwards;
-    height: 55vh;
+    height: 55%;
     transform: translate3d(0,75%,0) rotateX(45deg) rotateZ(45deg);
   }
 
   // Transition delay iteration.
   @for $i from 1 through 10 {
     span:nth-child(#{$i}) { transition-delay: $i * 50ms; }
+  }
+
+  @include breakpoint(tablet) {
+    span {
+      height: 75%;
+    }
   }
 }
 
@@ -84,7 +94,7 @@ export default {
 // Shape styles for about page.
 .about {
   span {
-    height: 20vh;
+    height: 20%;
     transform: translate3d(0, 0, 0) rotate(90deg)
   }
 
@@ -105,7 +115,7 @@ export default {
 // Shape styles for photos page.
 .photos {
   span {
-    height: 400px;
+    height: 555px;
     transform: translate3d(0,0,0);
   }
 }
